@@ -16,7 +16,6 @@ public class FileDataSource implements DataSource {
 
     @Override
     public String readData() {
-        System.out.println("Reading data from file " + fileName + "..." + data);
         return data;
     }
 }

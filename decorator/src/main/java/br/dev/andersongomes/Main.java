@@ -4,14 +4,14 @@ public class Main {
     public static void main(String[] args) {
         DataSource source = new FileDataSource("somefile.dat");
         source.writeData("Hello, World! FileDataSource");
-        source.readData();
+        System.out.println("Reading data from file... " +  source.readData());
 
-        source = new CompressionDecorator(source);
-        source.writeData("Hello, World! CompressionDecorator");
-        source.readData();
+        CompressionDecorator compressionDecorator = new CompressionDecorator(source);
+        compressionDecorator.writeData("Hello, World! CompressionDecorator");
+        System.out.println("Reading data from file... " +  compressionDecorator.readData());
 
-        source = new EncryptionDecorator(source);
-        source.writeData("Hello, World! EncryptionDecorator");
-        source.readData();
+        EncryptionDecorator encryptionDecorator = new EncryptionDecorator(source);
+        encryptionDecorator.writeData("Hello, World! EncryptionDecorator");
+        System.out.println("Reading data from file... " +  encryptionDecorator.readData());
     }
 }
