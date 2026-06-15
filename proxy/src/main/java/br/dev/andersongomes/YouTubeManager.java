@@ -22,8 +22,12 @@ public class YouTubeManager {
         System.out.println(list.toString());
     }
 
-    void reactOnUserInput() {
-        renderVideoPage(1);
+    void reactOnUserInput(long id) {
+        renderVideoPage(id);
         renderListPanel();
+    }
+
+    void downloadVideo(long id){
+        service.downloadVideo(id);
     }
 }

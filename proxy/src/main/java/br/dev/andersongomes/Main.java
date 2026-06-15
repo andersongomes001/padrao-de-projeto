@@ -5,6 +5,7 @@ public class Main {
         ThirdPartyYouTubeClass aYouTubeService = new ThirdPartyYouTubeClass();
         CachedYouTubeClass aYouTubeProxy = new CachedYouTubeClass(aYouTubeService);
         YouTubeManager manager = new YouTubeManager(aYouTubeProxy);
-        manager.reactOnUserInput();
+        manager.downloadVideo(3);
+        manager.reactOnUserInput(3);
     }
 }
