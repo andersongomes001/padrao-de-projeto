@@ -21,6 +21,12 @@
         <module>flyweight</module>
         <module>facade</module>
         <module>proxy</module>
+        <module>chainofresponsibility</module>
+        <module>command</module>
+        <module>iterador</module>
+        <module>mediator</module>
+        <module>memento</module>
+        <module>observer</module>
     </modules>
 
     <properties>
